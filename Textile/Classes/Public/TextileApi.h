@@ -51,7 +51,7 @@ NS_ASSUME_NONNULL_BEGIN
  * @param error A reference to an error pointer that will be set in the case of an error
  * @return The wallet account
  */
-+ (MobileWalletAccount *)walletAccountAt:(NSString *)phrase index:(NSInteger)index password:(NSString *)password error:(NSError **)error;
++ (MobileWalletAccount *)walletAccountAt:(NSString *)phrase index:(NSInteger)index password:(NSString * _Nullable)password error:(NSError **)error;
 
 /**
  * Check if Textile is already initialized

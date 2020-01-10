@@ -54,7 +54,7 @@ NSString *const TEXTILE_BACKGROUND_SESSION_ID = @"textile";
   return recoveryPhrase;
 }
 
-+ (MobileWalletAccount *)walletAccountAt:(NSString *)phrase index:(NSInteger)index password:(NSString *)password error:(NSError * _Nullable __autoreleasing *)error {
++ (MobileWalletAccount *)walletAccountAt:(NSString *)phrase index:(NSInteger)index password:(NSString * _Nullable)password error:(NSError * _Nullable __autoreleasing *)error {
   NSData *data = MobileWalletAccountAt(phrase, index, password, error);
   if (*error) {
     return nil;
