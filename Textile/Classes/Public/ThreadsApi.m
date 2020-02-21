@@ -27,14 +27,14 @@
 }
 
 - (Thread *)get:(NSString *)threadId error:(NSError * _Nullable __autoreleasing *)error {
-  /*
-   * thread returns an error if no thread is found.
-   */
-  NSData *data = [self.node thread:threadId error:error];
-  if (*error) {
-    return nil;
-  }
-  return [[Thread alloc] initWithData:data error:error];
+    NSData *data = [self.node thread:threadId error:error];
+    if (*error) {
+        return nil;
+    }
+    if (!data) {
+        return nil;
+    }
+    return [[Thread alloc] initWithData:data error:error];
 }
 
 - (ThreadList *)list:(NSError * _Nullable __autoreleasing *)error {

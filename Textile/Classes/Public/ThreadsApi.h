@@ -47,7 +47,7 @@ NS_ASSUME_NONNULL_BEGIN
  * @param error A reference to an error pointer that will be set in the case of an error
  * @return The corresponding thread object
  */
-- (Thread *)get:(NSString *)threadId error:(NSError **)error;
+- (nullable Thread *)get:(NSString *)threadId error:(NSError **)error;
 
 /**
  * List all threads the local peer account participates in
