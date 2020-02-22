@@ -32,6 +32,7 @@
         return nil;
     }
     if (!data) {
+        *error = [NSError errorWithDomain:@"io.textile" code:0 userInfo:@{ NSLocalizedDescriptionKey: @"thread no found" }];
         return nil;
     }
     return [[Thread alloc] initWithData:data error:error];
